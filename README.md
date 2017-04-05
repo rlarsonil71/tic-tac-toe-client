@@ -4,14 +4,35 @@
 
 Yayyy..
 
+# URL
+
+https://rlarsonil71.github.io/tic-tac-toe-client/
+
 ## Installation
 
 Install with `npm install`.
 Start with `grunt serve`.
 
-## Structure
+## List of Technologies Used
 
-## Tasks
+
+## Planning - Development Process and Problem Solving Strategy
+
+
+## List of Unsolved Problems
+
+1.
+2.
+3.
+
+## Link to Wireframes Used
+
+1.  http://imgur.com/8nwKLCm
+2.
+
+
+## Link to User Stories Used
+
 
 ## [License](LICENSE)
 
