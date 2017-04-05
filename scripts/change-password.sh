@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #curl "http://localhost:3000/change-password/${ID}" \
-#ID=6 OLDPW=hannah NEWPW=password TOKEN=sometoken scripts/change-password.sh
+#ID=1 OLDPW=triplets NEWPW=password TOKEN=token scripts/change-password.sh
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/change-password/$ID"
 curl --include --request PATCH "${API}${URL_PATH}" \

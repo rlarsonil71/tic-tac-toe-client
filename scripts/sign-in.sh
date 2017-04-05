@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #curl "http://localhost:3000/sign-in" \
-#EMAIL=ava@bob.com PASSWORD=hannah scripts/sign-in-json.sh
+#EMAIL=erik@larson.com PASSWORD=triplets scripts/sign-in.sh
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/sign-in"
 curl "${API}${URL_PATH}" \
