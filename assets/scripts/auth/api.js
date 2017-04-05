@@ -13,9 +13,19 @@ const signUp = (data) => {
   })
 }
 
+const signIn = (data) => {
+  // console.log('not here?')
+  return $.ajax({
+    url: config.apiOrigin + '/sign-in',
+    method: 'POST',
+    // data: data  (Same thing!)
+    data
+  })
+}
+
 module.exports = {
-  signUp
-  // signIn,
+  signUp,
+  signIn
   // signOut,
   // changePassword
 }
