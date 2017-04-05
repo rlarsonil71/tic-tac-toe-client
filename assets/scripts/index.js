@@ -18,5 +18,18 @@ const authEvents = require('./auth/events.js')
 // On document ready
 $(() => {
   console.log('Inside Tic Tac Toe Game')
+
+  $('form').on('submit', function (event) {
+    console.log('Inside submit handler for Name field of MODAL')
+
+    event.preventDefault()
+
+    const input = $('#name').val()
+    console.log('Name entered is: ', input)
+
+    // Hide the modal from displaying to the suer
+    $('#myModal').modal('hide')
+  })
+
   authEvents.addHandlers()
 })
