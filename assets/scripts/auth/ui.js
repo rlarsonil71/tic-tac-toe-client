@@ -29,6 +29,9 @@ const signInSuccess = (response) => {
 
 const signInFailure = (error) => {
   console.log('Sign-in failure!  Error is :', error)
+
+  // Hide the modal from displaying to the suer
+  $('#mySignInModal').modal('hide')
 }
 
 const changePasswordSuccess = (data) => {
@@ -40,6 +43,9 @@ const changePasswordSuccess = (data) => {
 
 const changePasswordFailure = (error) => {
   console.log('Change-Password failure!  Error is :', error)
+
+  // Hide the modal from displaying to the suer
+  $('#myChangePasswordModal').modal('hide')
 }
 
 const signOutSuccess = () => {
@@ -50,10 +56,16 @@ const signOutSuccess = () => {
   // Clear user
   store.user = null
   console.log('store is: ', store)
+
+  // Hide the modal from displaying to the suer
+  $('#mySignOutModal').modal('hide')
 }
 
 const signOutFailure = (error) => {
   console.log('Sign-out failure!  Error is :', error)
+
+  // Hide the modal from displaying to the suer
+  $('#mySignOutModal').modal('hide')
 }
 
 module.exports = {

@@ -27,5 +27,9 @@ $(() => {
     $('#myChangePasswordModal').modal('show')
   })
 
+  $('#select-sign-out').on('click', function () {
+    $('#mySignOutModal').modal('show')
+  })
+
   authEvents.addHandlers()
 })

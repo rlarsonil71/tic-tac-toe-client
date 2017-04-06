@@ -42,7 +42,7 @@ const changePassword = (data) => {
 }
 
 const signOut = () => {
-  // console.log('api.js: Inside signOut')
+  console.log('api.js: Inside signOut')
 
   // store.user is stored in ui.js -> signInSuccess
   return $.ajax({
