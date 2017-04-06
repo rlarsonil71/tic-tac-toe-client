@@ -29,7 +29,6 @@
             </button>
       </div>
 
-      <!-- Collect the nav sign-up, sign-in, change-password, and sign-our modals -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <form class="navbar-form navbar-left">
 
@@ -39,6 +38,10 @@
               <button type="button" id="select-sign-up" class="btn btn-primary btn-md" data-target="#mySignUpModal">
                     Sign Up
               </button>
+              <!-- Button trigger select-sign-in modal -->
+              <button type="button" id="select-sign-in" class="btn btn-primary btn-md" data-target="#mySignInModal">
+                    Sign In
+              </button>
             </div>
           </div>
         </form>
@@ -46,14 +49,14 @@
     </div>
   </nav>
 
-  <form id="sign-in">
+  <!-- <form id="sign-in">
     <fieldset>
       <legend>Sign In!</legend>
       <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Email">
       <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password">
       <input type="submit" name="submit" value="Sign In!">
     </fieldset>
-  </form><br>
+  </form><br> -->
 
   <form id="change-password">
     <fieldset>
@@ -71,7 +74,7 @@
     </fieldset>
   </form><br>
 
-  <!-- Modal -->
+  <!-- MODAL - SIGN-UP -->
   <div class="modal fade" id="mySignUpModal" tabindex="-1" role="dialog" aria-labelledby="mySignUpModalLabel">
     <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">
@@ -89,7 +92,35 @@
             <input type="submit" name="submit" value="Sign Up">
           </form>
         </div>
-        <!-- Modal Body -->
+        <!-- MODAL BODY -->
+
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL - SIGN-IN -->
+  <div class="modal fade" id="mySignInModal" tabindex="-1" role="dialog" aria-labelledby="mySignInModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="mySignInModalLabel">Sign In</h4>
+        </div>
+
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <form id="sign-in">
+              <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Email">
+              <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password">
+              <input type="submit" name="submit" value="Sign In">
+          </form>
+        </div>
+        <!-- MODAL BODY -->
 
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->

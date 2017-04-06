@@ -18,5 +18,9 @@ $(() => {
   $('#select-sign-up').on('click', function () {
     $('#mySignUpModal').modal('show')
   })
+
+  $('#select-sign-in').on('click', function () {
+    $('#mySignInModal').modal('show')
+  })
   authEvents.addHandlers()
 })
