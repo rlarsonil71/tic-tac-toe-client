@@ -4,11 +4,17 @@ const store = require('../store')
 
 const signUpSuccess = (data) => {
   console.log('signUpSuccess ran!  Data is :', data)
+
+  // Hide the modal from displaying to the suer
+  $('#mySignUpModal').modal('hide')
 }
 
 const signUpFailure = (error) => {
   console.log('Sign-up failure! Error is :', error)
   console.error(error)
+
+  // Hide the modal from displaying to the suer
+  $('#mySignUpModal').modal('hide')
 }
 
 const signInSuccess = (response) => {
