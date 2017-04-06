@@ -21,6 +21,10 @@ const signInSuccess = (response) => {
   console.log('signInSuccess ran!  Data is :', response)
   // Store user object
   store.user = response.user
+
+  console.log('ui.js: signInSuccess - store is: ', store)
+  // Hide the modal from displaying to the suer
+  $('#mySignInModal').modal('hide')
 }
 
 const signInFailure = (error) => {
@@ -29,6 +33,9 @@ const signInFailure = (error) => {
 
 const changePasswordSuccess = (data) => {
   console.log('Password successfully changed')
+
+  // Hide the modal from displaying to the suer
+  $('#myChangePasswordModal').modal('hide')
 }
 
 const changePasswordFailure = (error) => {

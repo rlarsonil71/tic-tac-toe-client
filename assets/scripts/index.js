@@ -22,5 +22,10 @@ $(() => {
   $('#select-sign-in').on('click', function () {
     $('#mySignInModal').modal('show')
   })
+
+  $('#select-change-password').on('click', function () {
+    $('#myChangePasswordModal').modal('show')
+  })
+
   authEvents.addHandlers()
 })

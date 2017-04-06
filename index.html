@@ -42,6 +42,10 @@
               <button type="button" id="select-sign-in" class="btn btn-primary btn-md" data-target="#mySignInModal">
                     Sign In
               </button>
+              <!-- Button trigger select-change-password modal -->
+              <button type="button" id="select-change-password" class="btn btn-primary btn-md" data-target="#myChangePasswordModal">
+                    Change Password
+              </button>
             </div>
           </div>
         </form>
@@ -49,23 +53,14 @@
     </div>
   </nav>
 
-  <!-- <form id="sign-in">
-    <fieldset>
-      <legend>Sign In!</legend>
-      <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Email">
-      <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password">
-      <input type="submit" name="submit" value="Sign In!">
-    </fieldset>
-  </form><br> -->
-
-  <form id="change-password">
+  <!-- <form id="change-password">
     <fieldset>
       <legend>Change Password</legend>
       <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
       <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
       <input type="submit" name="submit" value="Change Password">
     </fieldset>
-  </form><br>
+  </form><br> -->
 
   <form id="sign-out">
     <fieldset>
@@ -118,6 +113,34 @@
               <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Email">
               <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password">
               <input type="submit" name="submit" value="Sign In">
+          </form>
+        </div>
+        <!-- MODAL BODY -->
+
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL - CHANGE-PASSWORD -->
+  <div class="modal fade" id="myChangePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myChangePasswordModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myChangePasswordModalLabel">Change Password</h4>
+        </div>
+
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <form id="change-password">
+              <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
+              <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
+              <input type="submit" name="submit" value="Change Password">
           </form>
         </div>
         <!-- MODAL BODY -->
