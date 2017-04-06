@@ -3,10 +3,6 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 
-$(() => {
-  setAPIOrigin(location, config)
-})
-
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -17,18 +13,22 @@ const authEvents = require('./auth/events.js')
 
 // On document ready
 $(() => {
-  console.log('Inside Tic Tac Toe Game')
+  setAPIOrigin(location, config)
+  console.log('index.js: Inside Tic Tac Toe Game (on document ready)')
+  $('#select-sign-up').on('click', function () {
+    $('#mySignUpModal').modal('show')
+  })
 
-  $('form').on('submit', function (event) {
-    console.log('Inside submit handler for Name field of MODAL')
+  $('#select-sign-in').on('click', function () {
+    $('#mySignInModal').modal('show')
+  })
 
-    event.preventDefault()
+  $('#select-change-password').on('click', function () {
+    $('#myChangePasswordModal').modal('show')
+  })
 
-    const input = $('#name').val()
-    console.log('Name entered is: ', input)
-
-    // Hide the modal from displaying to the suer
-    $('#myModal').modal('hide')
+  $('#select-sign-out').on('click', function () {
+    $('#mySignOutModal').modal('show')
   })
 
   authEvents.addHandlers()
