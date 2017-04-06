@@ -30,7 +30,7 @@
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form class="navbar-form navbar-left">
+        <form class="navbar-form navbar-left" id="auth-modals">
 
           <div class="row">
             <div class="col-xs-12">
@@ -50,19 +50,17 @@
               <button type="button" id="select-sign-out" class="btn btn-primary btn-md" data-target="#mySignOutModal">
                     Sign Out
               </button>
+
+              <!-- Button trigger select-create-game modal -->
+              <button type="button" id="select-create-game" class="btn btn-success btn-md" data-target="#myCreateGameModal">
+                    Start New Game
+              </button>
             </div>
           </div>
         </form>
       </div>
     </div>
   </nav>
-
-  <!-- <form id="sign-out">
-    <fieldset>
-      <legend>Sign Out!</legend>
-      <input type="submit" name="submit" value="Sign Out!">
-    </fieldset>
-  </form><br> -->
 
   <!-- MODAL - SIGN-UP -->
   <div class="modal fade" id="mySignUpModal" tabindex="-1" role="dialog" aria-labelledby="mySignUpModalLabel">
@@ -162,6 +160,32 @@
         <div class="modal-body">
           <form id="sign-out">
               <input type="submit" name="submit" value="Sign Out">
+          </form>
+        </div>
+        <!-- MODAL BODY -->
+
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL - CREATE-GAME -->
+  <div class="modal fade" id="myCreateGameModal" tabindex="-1" role="dialog" aria-labelledby="myCreateGameModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myCreateGameModalLabel">Start New Game</h4>
+        </div>
+
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <form id="create-game">
+              <input type="submit" name="submit" value="Start New Game">
           </form>
         </div>
         <!-- MODAL BODY -->

@@ -10,6 +10,7 @@ const config = require('./config')
 require('./example')
 
 const authEvents = require('./auth/events.js')
+const gameEvents = require('./game/events.js')
 
 // On document ready
 $(() => {
@@ -31,5 +32,10 @@ $(() => {
     $('#mySignOutModal').modal('show')
   })
 
+  $('#select-create-game').on('click', function () {
+    $('#myCreateGameModal').modal('show')
+  })
+
   authEvents.addHandlers()
+  gameEvents.addHandlers()
 })
