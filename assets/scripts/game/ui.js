@@ -5,7 +5,7 @@
 const createGameSuccess = (ajaxResponse) => {
   console.log('createGameSuccess ran!  Data is :', ajaxResponse)
 
-  // Hide the modal from displaying to the suer
+  // Hide the modal from displaying to the user
   $('#myCreateGameModal').modal('hide')
 }
 
@@ -13,8 +13,23 @@ const createGameFailure = (error) => {
   console.log('Create Game failure! Error is :', error)
   console.error(error)
 
-  // Hide the modal from displaying to the suer
+  // Hide the modal from displaying to the user
   $('#myCreateGameModal').modal('hide')
+}
+
+const indexGameSuccess = (ajaxResponse) => {
+  console.log('indexGameSuccess ran!  Data is :', ajaxResponse)
+
+  // Hide the modal from displaying to the user
+  $('#myIndexGameModal').modal('hide')
+}
+
+const indexGameFailure = (error) => {
+  console.log('Index Game failure! Error is :', error)
+  console.error(error)
+
+  // Hide the modal from displaying to the user
+  $('#myIndexGameModal').modal('hide')
 }
 
 // const signInSuccess = (ajaxResponse) => {
@@ -70,7 +85,9 @@ const createGameFailure = (error) => {
 
 module.exports = {
   createGameSuccess,
-  createGameFailure
+  createGameFailure,
+  indexGameSuccess,
+  indexGameFailure
   // signInSuccess,
   // signInFailure,
   // changePasswordSuccess,

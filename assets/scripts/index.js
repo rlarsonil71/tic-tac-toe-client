@@ -36,6 +36,10 @@ $(() => {
     $('#myCreateGameModal').modal('show')
   })
 
+  $('#select-index-game').on('click', function () {
+    $('#myIndexGameModal').modal('show')
+  })
+
   authEvents.addHandlers()
   gameEvents.addHandlers()
 })

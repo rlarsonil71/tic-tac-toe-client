@@ -67,6 +67,20 @@ const createGame = () => {
   })
 }
 
+const indexGame = () => {
+  console.log('api.js: Inside indexGame')
+
+  // store.user is stored in ui.js -> signInSuccess
+  return $.ajax({
+    url: config.apiOrigin + '/games/',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  createGame
+  createGame,
+  indexGame
 }
