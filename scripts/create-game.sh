@@ -1,6 +1,13 @@
 #!/bin/bash
 
-#TOKEN=BAhJIiUwMmNmZDQ2NDM2MjFkZjJkMTE1NDQwZmM5MDM2NWRhMQY6BkVG--bc9816ec6b6d7ae395bb163ce4eb843fb0126888 scripts/create-game.sh
+#TOKEN=token scripts/create-game.sh
+
+# create-game
+# CURL POST that creates a new game associated with a user with the given $TOKEN
+#  passed in parameter
+
+# Must sign in with above user first in order for this script to work
+
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/games/"
 curl "${API}${URL_PATH}" \
