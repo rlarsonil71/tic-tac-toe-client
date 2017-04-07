@@ -25,9 +25,20 @@ const onIndexGame = function (event) {
     .catch(ui.indexGameFailure)
 }
 
+const onShowGame = function (event) {
+  event.preventDefault()
+  console.log('show-game ran!')
+
+  const data = getFormFields(this)
+  api.showGame(data)
+    .then(ui.showGameSuccess)
+    .catch(ui.showGameFailure)
+}
+
 const addHandlers = () => {
   $('#create-game').on('submit', onCreateGame)
   $('#index-game').on('submit', onIndexGame)
+  $('#show-game').on('submit', onShowGame)
 }
 
 module.exports = {

@@ -1,9 +1,12 @@
 'use strict'
 
-// const store = require('../store')
+const store = require('../store')
 
 const createGameSuccess = (ajaxResponse) => {
   console.log('createGameSuccess ran!  Data is :', ajaxResponse)
+
+  // Store game object
+  store.game = ajaxResponse.game
 
   // Hide the modal from displaying to the user
   $('#myCreateGameModal').modal('hide')
@@ -30,6 +33,21 @@ const indexGameFailure = (error) => {
 
   // Hide the modal from displaying to the user
   $('#myIndexGameModal').modal('hide')
+}
+
+const showGameSuccess = (ajaxResponse) => {
+  console.log('showGameSuccess ran!  Data is :', ajaxResponse)
+
+  // Hide the modal from displaying to the user
+  $('#myShowGameModal').modal('hide')
+}
+
+const showGameFailure = (error) => {
+  console.log('Show Game failure! Error is :', error)
+  console.error(error)
+
+  // Hide the modal from displaying to the user
+  $('#myShowGameModal').modal('hide')
 }
 
 // const signInSuccess = (ajaxResponse) => {
@@ -87,7 +105,9 @@ module.exports = {
   createGameSuccess,
   createGameFailure,
   indexGameSuccess,
-  indexGameFailure
+  indexGameFailure,
+  showGameSuccess,
+  showGameFailure
   // signInSuccess,
   // signInFailure,
   // changePasswordSuccess,

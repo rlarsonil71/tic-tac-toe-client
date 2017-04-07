@@ -40,6 +40,10 @@ $(() => {
     $('#myIndexGameModal').modal('show')
   })
 
+  $('#select-show-game').on('click', function () {
+    $('#myShowGameModal').modal('show')
+  })
+
   authEvents.addHandlers()
   gameEvents.addHandlers()
 })
