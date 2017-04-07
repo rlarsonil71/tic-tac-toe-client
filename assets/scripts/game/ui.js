@@ -50,6 +50,21 @@ const showGameFailure = (error) => {
   $('#myShowGameModal').modal('hide')
 }
 
+const updateGameStateSuccess = (ajaxResponse) => {
+  console.log('updateGameStateSuccess ran!  Data is :', ajaxResponse)
+
+  // Hide the modal from displaying to the user
+  $('#myUpdateGameStateModal').modal('hide')
+}
+
+const updateGameStateFailure = (error) => {
+  console.log('Update Game State failure! Error is :', error)
+  console.error(error)
+
+  // Hide the modal from displaying to the user
+  $('#myUpdateGameStateModal').modal('hide')
+}
+
 // const signInSuccess = (ajaxResponse) => {
 //   console.log('signInSuccess ran!  Data is :', ajaxResponse)
 //   // Store user object
@@ -107,7 +122,9 @@ module.exports = {
   indexGameSuccess,
   indexGameFailure,
   showGameSuccess,
-  showGameFailure
+  showGameFailure,
+  updateGameStateSuccess,
+  updateGameStateFailure
   // signInSuccess,
   // signInFailure,
   // changePasswordSuccess,

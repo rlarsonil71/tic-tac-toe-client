@@ -93,8 +93,25 @@ const showGame = () => {
   })
 }
 
+const updateGameState = (data) => {
+  console.log('api.js: Inside updateGameState (data is ', data)
+
+  // store.game is stored in games/ui.js -> createGameSuccess
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+      // AJAX or RAILS doesn't know what to do with 2nd header below
+      // Content-Type: application/json
+    },
+    data
+  })
+}
+
 module.exports = {
   createGame,
   indexGame,
-  showGame
+  showGame,
+  updateGameState
 }

@@ -44,6 +44,10 @@ $(() => {
     $('#myShowGameModal').modal('show')
   })
 
+  $('#select-update-game-state').on('click', function () {
+    $('#myUpdateGameStateModal').modal('show')
+  })
+
   authEvents.addHandlers()
   gameEvents.addHandlers()
 })
