@@ -28,7 +28,7 @@ const signIn = (data) => {
 const changePassword = (data) => {
   console.log('api.js: Inside changePassword (data is ' + data + ')')
 
-  // store.user is stored in ui.js -> signInSuccess
+  // store.user is stored in auth/ui.js -> signInSuccess
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',

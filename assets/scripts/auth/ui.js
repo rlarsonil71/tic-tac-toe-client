@@ -2,8 +2,8 @@
 
 const store = require('../store')
 
-const signUpSuccess = (data) => {
-  console.log('signUpSuccess ran!  Data is :', data)
+const signUpSuccess = (ajaxResponse) => {
+  console.log('signUpSuccess ran!  Data is :', ajaxResponse)
 
   // Hide the modal from displaying to the suer
   $('#mySignUpModal').modal('hide')
@@ -17,10 +17,10 @@ const signUpFailure = (error) => {
   $('#mySignUpModal').modal('hide')
 }
 
-const signInSuccess = (response) => {
-  console.log('signInSuccess ran!  Data is :', response)
+const signInSuccess = (ajaxResponse) => {
+  console.log('signInSuccess ran!  Data is :', ajaxResponse)
   // Store user object
-  store.user = response.user
+  store.user = ajaxResponse.user
 
   console.log('ui.js: signInSuccess - store is: ', store)
   // Hide the modal from displaying to the suer
@@ -34,7 +34,7 @@ const signInFailure = (error) => {
   $('#mySignInModal').modal('hide')
 }
 
-const changePasswordSuccess = (data) => {
+const changePasswordSuccess = (ajaxResponse) => {
   console.log('Password successfully changed')
 
   // Hide the modal from displaying to the suer
