@@ -2,8 +2,13 @@
 
 const store = require('../store')
 
+const errorTextUponSignUpFailure = 'Password is incorrect.  Please type in correct password.'
+
 const signUpSuccess = (ajaxResponse) => {
   console.log('signUpSuccess ran!  Data is :', ajaxResponse)
+
+  // Clear error text message.
+  $('#sign-up-footer').html(' ')
 
   // Hide the modal from displaying to the suer
   $('#mySignUpModal').modal('hide')
@@ -21,7 +26,6 @@ const signUpFailure = (error) => {
 
   // Display error text in SIGN UP modal footer back to user to correct
   //  incorrect password mismatch
-  const errorTextUponSignUpFailure = 'Password is incorrect.  Please type in correct password.'
   $('#sign-up-footer').html(errorTextUponSignUpFailure)
 
   // If user closes out of SIGN UP modal, clear error text message.
@@ -65,6 +69,9 @@ const signInFailure = (error) => {
 const changePasswordSuccess = (ajaxResponse) => {
   console.log('Password successfully changed')
 
+  // Clear error text message.
+  $('#change-password-footer').html(' ')
+
   // Hide the modal from displaying to the suer
   $('#myChangePasswordModal').modal('hide')
 }
@@ -72,8 +79,14 @@ const changePasswordSuccess = (ajaxResponse) => {
 const changePasswordFailure = (error) => {
   console.log('Change-Password failure!  Error is :', error)
 
-  // Hide the modal from displaying to the suer
-  $('#myChangePasswordModal').modal('hide')
+  // Display error text in CHANGE PASSWORD modal footer back to user to correct
+  //  incorrect original password
+  $('#change-password-footer').html(errorTextUponSignUpFailure)
+
+  // If user closes out of CHANGE PASSWORD modal, clear error text message.
+  $('#close-change-password-modal').on('click', function () {
+    $('#change-password-footer').html(' ')
+  })
 }
 
 const signOutSuccess = () => {
