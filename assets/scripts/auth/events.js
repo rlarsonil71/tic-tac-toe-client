@@ -12,9 +12,25 @@ const onSignUp = function (event) {
   const data = getFormFields(this)
   // console.log('auth/event.js (onSignUp) Data: ', data)
 
-  api.signUp(data)
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+  // CHECK FOR USER ENTERED PASSWORD MISMATCH in SIGN-UP modal
+  if (data.credentials.password === data.credentials.password_confirmation) {
+    // User entered the same passwords, try to sign up user
+    api.signUp(data)
+      .then(ui.signUpSuccess)
+      .catch(ui.signUpFailure)
+  } else {
+    // User did not enter the same passwords.  Ask user to re-enter passwords.
+    const errorTextUponPasswordMismatchFailure = 'Passwords do not match.  Please verify passwords match.'
+
+    // Display error text in SIGN UP modal footer back to user to correct
+    //  incorrect password.
+    $('#sign-up-footer').html(errorTextUponPasswordMismatchFailure)
+
+    // If user closes out of SIGN UP modal, clear error text message.
+    $('#close-sign-up-modal').on('click', function () {
+      $('#sign-up-footer').html(' ')
+    })
+  }
 }
 
 const onSignIn = function (event) {

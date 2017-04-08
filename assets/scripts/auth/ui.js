@@ -2,7 +2,8 @@
 
 const store = require('../store')
 
-const errorTextUponSignUpFailure = 'Password is incorrect.  Please type in correct password.'
+const errorTextUponSignUpFailure = 'User has already signed up.  Please sign in.'
+const errorTextUponIncorrectPasswordFailure = 'Password is incorrect.  Please type in correct password.'
 
 const signUpSuccess = (ajaxResponse) => {
   console.log('signUpSuccess ran!  Data is :', ajaxResponse)
@@ -24,14 +25,25 @@ const signUpFailure = (error) => {
   console.log('Sign-up failure! Error is :', error)
   console.error(error)
 
-  // Display error text in SIGN UP modal footer back to user to correct
-  //  incorrect password mismatch
+  // Display error text in SIGN UP modal footer back to user that the user
+  //  has already signed up
+  // NOTE: Front-end client (auth/events.js: onSignUp) checks for invalid
+  //  password mismatch prior to submitting AJAX sign-up call so an invalid
+  //  password mismatch will not get this far.
   $('#sign-up-footer').html(errorTextUponSignUpFailure)
 
   // If user closes out of SIGN UP modal, clear error text message.
   $('#close-sign-up-modal').on('click', function () {
     $('#sign-up-footer').html(' ')
   })
+
+  // DELAY 2 seconds for user to read error text and then close SIGN UP modal
+  //  and show SIGN IN modal.
+  window.setTimeout(function () {
+    // Hide the modal from displaying to the suer
+    $('#mySignUpModal').modal('hide')
+    $('#mySignInModal').modal('show')
+  }, 2000)
 }
 
 const signInSuccess = (ajaxResponse) => {
@@ -68,7 +80,7 @@ const signInFailure = (error) => {
 
   // Display error text in SIGN IN modal footer back to user to correct
   //  incorrect password
-  $('#sign-in-footer').html(errorTextUponSignUpFailure)
+  $('#sign-in-footer').html(errorTextUponIncorrectPasswordFailure)
 
   // If user closes out of SIGN IN modal, clear error text message.
   $('#close-sign-in-modal').on('click', function () {
@@ -91,7 +103,7 @@ const changePasswordFailure = (error) => {
 
   // Display error text in CHANGE PASSWORD modal footer back to user to correct
   //  incorrect original password
-  $('#change-password-footer').html(errorTextUponSignUpFailure)
+  $('#change-password-footer').html(errorTextUponIncorrectPasswordFailure)
 
   // If user closes out of CHANGE PASSWORD modal, clear error text message.
   $('#close-change-password-modal').on('click', function () {
