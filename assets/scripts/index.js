@@ -58,6 +58,12 @@ $(() => {
   // Hide Start New Game modal button initially until user signs in.
   $('#select-create-game').hide()
 
+  // DEBUG MODAL buttons
+  $('#select-index-game').hide()
+  $('#select-show-game').hide()
+  $('#select-update-game-state').hide()
+  // END DEBUG
+
   authEvents.addHandlers()
   gameEvents.addHandlers()
 })
