@@ -79,22 +79,22 @@
     <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" id="close-sign-up-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="mySignUpModalLabel">Sign Up</h4>
         </div>
 
         <!-- MODAL BODY -->
         <div class="modal-body">
           <form id="sign-up">
-            <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Email">
-            <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Password">
-            <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Confirm Password">
+            <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Email"><br>
+            <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Password"><br>
+            <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Confirm Password"><br><br>
             <input type="submit" name="submit" value="Sign Up">
           </form>
         </div>
         <!-- MODAL BODY -->
 
-        <div class="modal-footer">
+        <div class="modal-footer" id="sign-up-footer">
           <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
@@ -115,8 +115,8 @@
         <!-- MODAL BODY -->
         <div class="modal-body">
           <form id="sign-in">
-              <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Email">
-              <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password">
+              <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Email"><br>
+              <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password"><br><br>
               <input type="submit" name="submit" value="Sign In">
           </form>
         </div>
@@ -143,8 +143,8 @@
         <!-- MODAL BODY -->
         <div class="modal-body">
           <form id="change-password">
-              <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
-              <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
+              <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password"><br>
+              <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password"><br><br>
               <input type="submit" name="submit" value="Change Password">
           </form>
         </div>
@@ -165,7 +165,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="mySignOutModalLabel">Sign Out</h4>
+          <h4 class="modal-title" id="mySignOutModalLabel">Confirm Sign Out</h4>
         </div>
 
         <!-- MODAL BODY -->
@@ -276,8 +276,8 @@
         <div class="modal-body">
           <form id="update-game-state">
               <!-- update-game-state form from game-project-api REPO README -->
-              <input type="text" name="game[cell][index]" value="6" id="update-game-state-cell-index" placeholder="Cell Index">
-              <input type="text" name="game[cell][value]" value="x" id="update-game-state-cell-value" placeholder="Cell Value">
+              <input type="text" name="game[cell][index]" value="6" id="update-game-state-cell-index" placeholder="Cell Index"><br>
+              <input type="text" name="game[cell][value]" value="x" id="update-game-state-cell-value" placeholder="Cell Value"><br>
               <input type="text" name="game[over]" value="false">
 
               <!-- <input type="text" name="passwords[old]" id="change-password-old" placeholder="Old Password">

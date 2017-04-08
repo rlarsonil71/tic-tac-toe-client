@@ -16,6 +16,8 @@ const gameEvents = require('./game/events.js')
 $(() => {
   setAPIOrigin(location, config)
   console.log('index.js: Inside Tic Tac Toe Game (on document ready)')
+
+  // Set up click events for modal buttons
   $('#select-sign-up').on('click', function () {
     $('#mySignUpModal').modal('show')
   })
@@ -47,6 +49,14 @@ $(() => {
   $('#select-update-game-state').on('click', function () {
     $('#myUpdateGameStateModal').modal('show')
   })
+
+  // Hide Change Password and Sign Out modal buttons initially until user
+  //  signs in.
+  $('#select-change-password').hide()
+  $('#select-sign-out').hide()
+
+  // Hide Start New Game modal button initially until user signs in.
+  $('#select-create-game').hide()
 
   authEvents.addHandlers()
   gameEvents.addHandlers()

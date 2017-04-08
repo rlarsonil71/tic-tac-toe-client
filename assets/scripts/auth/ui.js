@@ -7,14 +7,27 @@ const signUpSuccess = (ajaxResponse) => {
 
   // Hide the modal from displaying to the suer
   $('#mySignUpModal').modal('hide')
+
+  // Upon successful user sign up, hide SIGN UP modal button
+  $('#select-sign-up').hide()
+
+  // Upon successful user sign up, show SIGN IN modal
+  $('#mySignInModal').modal('show')
 }
 
 const signUpFailure = (error) => {
   console.log('Sign-up failure! Error is :', error)
   console.error(error)
 
-  // Hide the modal from displaying to the suer
-  $('#mySignUpModal').modal('hide')
+  // Display error text in SIGN UP modal footer back to user to correct
+  //  incorrect password mismatch
+  const errorTextUponSignUpFailure = 'Password is incorrect.  Please type in correct password.'
+  $('#sign-up-footer').html(errorTextUponSignUpFailure)
+
+  // If user closes out of SIGN UP modal, clear error text message.
+  $('#close-sign-up-modal').on('click', function () {
+    $('#sign-up-footer').html(' ')
+  })
 }
 
 const signInSuccess = (ajaxResponse) => {
@@ -25,6 +38,21 @@ const signInSuccess = (ajaxResponse) => {
   console.log('ui.js: signInSuccess - store is: ', store)
   // Hide the modal from displaying to the suer
   $('#mySignInModal').modal('hide')
+
+  // Upon successful user sign in, hide SIGN UP modal button
+  $('#select-sign-up').hide()
+
+  // Upon successful user sign in, hide SIGN IN modal button
+  $('#select-sign-in').hide()
+
+  // Upon successful user sign in, show CHANGE PASSWORD modal button
+  $('#select-change-password').show()
+
+  // Upon successful user sign in, show SIGN OUT modal button
+  $('#select-sign-out').show()
+
+  // Upon successful user sign in, show START NEW GAME modal button
+  $('#select-create-game').show()
 }
 
 const signInFailure = (error) => {
@@ -59,6 +87,18 @@ const signOutSuccess = () => {
 
   // Hide the modal from displaying to the suer
   $('#mySignOutModal').modal('hide')
+
+  // Upon successful user sign out, show SIGN UP modal button
+  $('#select-sign-up').show()
+
+  // Upon successful user sign out, show SIGN IN modal button
+  $('#select-sign-in').show()
+
+  // Upon successful user sign out, hide CHANGE PASSWORD modal button
+  $('#select-change-password').hide()
+
+  // Upon successful user sign out, hide SIGN OUT modal button
+  $('#select-sign-out').hide()
 }
 
 const signOutFailure = (error) => {
