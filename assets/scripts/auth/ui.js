@@ -36,6 +36,10 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (ajaxResponse) => {
   console.log('signInSuccess ran!  Data is :', ajaxResponse)
+
+  // Clear error text message.
+  $('#sign-in-footer').html(' ')
+
   // Store user object
   store.user = ajaxResponse.user
 
@@ -62,8 +66,14 @@ const signInSuccess = (ajaxResponse) => {
 const signInFailure = (error) => {
   console.log('Sign-in failure!  Error is :', error)
 
-  // Hide the modal from displaying to the suer
-  $('#mySignInModal').modal('hide')
+  // Display error text in SIGN IN modal footer back to user to correct
+  //  incorrect password
+  $('#sign-in-footer').html(errorTextUponSignUpFailure)
+
+  // If user closes out of SIGN IN modal, clear error text message.
+  $('#close-sign-in-modal').on('click', function () {
+    $('#sign-in-footer').html(' ')
+  })
 }
 
 const changePasswordSuccess = (ajaxResponse) => {
