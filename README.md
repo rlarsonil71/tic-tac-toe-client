@@ -145,18 +145,18 @@ http://imgur.com/gallery/Bmql6
 
 ## User Stories Used
 
-As a player, I want to sign up, so that I can play a game.
-As a player, I want to sign in, so that I can login and play a game.
-As a player, I want to change a password, so that I can protect my login
- credentials.
-As a player, I want to sign out, so that I can sign out.
-As a player, I want to start a new game, so that I can play a game.
-As a player, I want to play multiple games one at a time, so that I can have
- fun.
-As a player, I want to sign in again so that I can play a game if I typed in
- an incorrect password.
-As a player, I want to sign up again so that I can play a game if I typed in
- 2 different passwords at sign up.
+1.  As a player, I want to sign up, so that I can play a game.
+2.  As a player, I want to sign in, so that I can login and play a game.
+3.  As a player, I want to change a password, so that I can protect my login
+     credentials.
+4. As a player, I want to sign out, so that I can sign out.
+5. As a player, I want to start a new game, so that I can play a game.
+6. As a player, I want to play multiple games one at a time, so that I can have
+    fun.
+7. As a player, I want to sign in again so that I can play a game if I typed in
+    an incorrect password.
+8. As a player, I want to sign up again so that I can play a game if I typed in
+    2 different passwords at sign up.
 
 
 ## List of Challenges
