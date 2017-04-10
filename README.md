@@ -143,9 +143,20 @@ http://imgur.com/gallery/Bmql6
 1.  http://imgur.com/8nwKLCm
 2.  http://imgur.com/gallery/AaYes
 
-## Link to User Stories Used
+## User Stories Used
 
-http://github.com/rlarson71/tic-tac-toe-client/blob/master/userStories.md
+As a player, I want to sign up, so that I can play a game.
+As a player, I want to sign in, so that I can login and play a game.
+As a player, I want to change a password, so that I can protect my login
+ credentials.
+As a player, I want to sign out, so that I can sign out.
+As a player, I want to start a new game, so that I can play a game.
+As a player, I want to play multiple games one at a time, so that I can have
+ fun.
+As a player, I want to sign in again so that I can play a game if I typed in
+ an incorrect password.
+As a player, I want to sign up again so that I can play a game if I typed in
+ 2 different passwords at sign up.
 
 
 ## List of Challenges
