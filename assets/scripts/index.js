@@ -15,7 +15,7 @@ const gameEvents = require('./game/events.js')
 // On document ready
 $(() => {
   setAPIOrigin(location, config)
-  console.log('index.js: Inside Tic Tac Toe Game (on document ready)')
+  // console.log('index.js: Inside Tic Tac Toe Game (on document ready)')
 
   // Set up click events for modal buttons
   $('#select-sign-up').on('click', function () {
@@ -63,6 +63,10 @@ $(() => {
   $('#select-show-game').hide()
   $('#select-update-game-state').hide()
   // END DEBUG
+
+  // Set GUI status bar on game initialization
+  document.getElementById('status-bar-1').innerHTML = 'Welcome!!!'
+  document.getElementById('status-bar-2').innerHTML = 'Please SIGN UP or SIGN IN!'
 
   authEvents.addHandlers()
   gameEvents.addHandlers()

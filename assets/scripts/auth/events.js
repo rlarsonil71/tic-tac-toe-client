@@ -7,7 +7,7 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('Sign-up ran!')
+  // console.log('Sign-up ran!')
 
   const data = getFormFields(this)
   // console.log('auth/event.js (onSignUp) Data: ', data)
@@ -35,7 +35,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('Sign-in ran!')
+  // console.log('Sign-in ran!')
 
   const data = getFormFields(this)
   api.signIn(data)
@@ -45,7 +45,7 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('Change Password ran!')
+  // console.log('Change Password ran!')
 
   const data = getFormFields(this)
   api.changePassword(data)
@@ -55,7 +55,7 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('Sign-out ran!')
+  // console.log('Sign-out ran!')
 
   // Don't need to use data object here!
   api.signOut()
