@@ -145,7 +145,7 @@ http://imgur.com/gallery/Bmql6
 
 ## Link to User Stories Used
 
-http://github.com/rlarson71/tic-tac-toe-client/blob/feature/userStories.md
+http://github.com/rlarson71/tic-tac-toe-client/blob/master/userStories.md
 
 
 ## List of Challenges
