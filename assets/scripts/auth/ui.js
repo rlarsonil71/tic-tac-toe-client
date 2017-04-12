@@ -18,7 +18,7 @@ const signUpSuccess = (ajaxResponse) => {
   // Clear error text message in SIGN UP modal.
   $('#sign-up-footer').html(' ')
 
-  // Hide the modal from displaying to the suer
+  // Hide the SIGN UP modal from displaying to the suer
   $('#mySignUpModal').modal('hide')
 
   // Upon successful user sign up, hide SIGN UP modal button
@@ -81,6 +81,9 @@ const signInSuccess = (ajaxResponse) => {
 
   // Upon successful user sign in, show START NEW GAME modal button
   $('#select-create-game').show()
+
+  // Upon successful user sign in, show SHOW USER STATS GAME modal button
+  $('#select-show-user-stats').show()
 
   // Set GUI status bar after user signs in
   const userString = 'Welcome ' + store.user.email + '!!!'
@@ -161,6 +164,9 @@ const signOutSuccess = () => {
 
     // Upon successful user sign out, hide CREATE GAME modal button
     $('#select-create-game').hide()
+
+    // Upon successful user sign out, hide SHOW USER STATS GAME modal button
+    $('#select-show-user-stats').hide()
 
     // Set GUI status bar on game initialization
     document.getElementById('status-bar-1').innerHTML = welcomeText

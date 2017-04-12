@@ -234,8 +234,18 @@ const checkForTiedGameBoard = function () {
   } else return false
 }
 
+const showUserStats = function () {
+  // Show User Stats - Number of Games Played to the GUI status bar after user selects
+  //  the SHOW USER STATS GAME modal button
+
+  console.log('game/gameLogic.js (showUserStats) ran!')
+  document.getElementById('status-bar-1').innerHTML = 'STATS1'
+  document.getElementById('status-bar-2').innerHTML = 'STATS2'
+}
+
 module.exports = {
   processClick,
   initGameBoard,
-  clearGameBoard
+  clearGameBoard,
+  showUserStats
 }

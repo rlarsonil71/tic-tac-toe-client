@@ -55,6 +55,10 @@
               <button type="button" id="select-create-game" class="btn btn-success btn-md" data-target="#myCreateGameModal">
                     Start New Game
               </button>
+              <!-- Button trigger select-show-user-stats modal -->
+              <button type="button" id="select-show-user-stats" class="btn btn-success btn-md" data-target="#myShowUserStatsModal">
+                    Show My Stats
+              </button>
               <!-- Button trigger select-index-game modal -->
               <button type="button" id="select-index-game" class="btn btn-success btn-md" data-target="#myIndexGameModal">
                     Get all My Games (Index Game)
@@ -198,6 +202,32 @@
         <div class="modal-body">
           <form id="create-game">
               <input type="submit" name="submit" value="Start New Game">
+          </form>
+        </div>
+        <!-- MODAL BODY -->
+
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL - SHOW-USER-STATS -->
+  <div class="modal fade" id="myShowUserStatsModal" tabindex="-1" role="dialog" aria-labelledby="myShowUserStatsModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myShowUserStatsModalLabel">Show My Stats</h4>
+        </div>
+
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <form id="show-user-stats">
+              <input type="submit" name="submit" value="Show My Stats">
           </form>
         </div>
         <!-- MODAL BODY -->

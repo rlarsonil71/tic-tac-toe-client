@@ -38,6 +38,10 @@ $(() => {
     $('#myCreateGameModal').modal('show')
   })
 
+  $('#select-show-user-stats').on('click', function () {
+    $('#myShowUserStatsModal').modal('show')
+  })
+
   $('#select-index-game').on('click', function () {
     $('#myIndexGameModal').modal('show')
   })
@@ -57,6 +61,9 @@ $(() => {
 
   // Hide Start New Game modal button initially until user signs in.
   $('#select-create-game').hide()
+
+  // Hide Show User Stats modal button initially until user signs in.
+  $('#select-show-user-stats').hide()
 
   // DEBUG MODAL buttons
   $('#select-index-game').hide()

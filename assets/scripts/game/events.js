@@ -21,6 +21,16 @@ const onCreateGame = function (event) {
     .catch(ui.createGameFailure)
 }
 
+const onShowUserStats = function (event) {
+  event.preventDefault()
+  // console.log('show-stats ran!')
+
+  // Don't need to use data object here!
+  api.showUserStats()
+    .then(ui.showUserStatsSuccess)
+    .catch(ui.showUserStatsFailure)
+}
+
 const onIndexGame = function (event) {
   event.preventDefault()
   // console.log('index-game ran!')
@@ -74,6 +84,9 @@ const onClickBoard = function (event) {
 const addHandlers = () => {
   // Set up event handler to create new game modal
   $('#create-game').on('submit', onCreateGame)
+
+  // Set up event handler to show stats game modal
+  $('#show-user-stats').on('submit', onShowUserStats)
 
   // Set up event handlers for temporary simulation modals to test GAME API
   //  AJAX calls

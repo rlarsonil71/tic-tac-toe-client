@@ -16,6 +16,19 @@ const createGame = () => {
   })
 }
 
+const showUserStats = () => {
+  // console.log('game/api.js (showUserStats)')
+
+  // store.user is stored in ui.js -> signInSuccess
+  return $.ajax({
+    url: config.apiOrigin + '/games/',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const indexGame = () => {
   // console.log('game/api.js (indexGame)')
 
@@ -60,6 +73,7 @@ const updateGameState = (data) => {
 
 module.exports = {
   createGame,
+  showUserStats,
   indexGame,
   showGame,
   updateGameState
